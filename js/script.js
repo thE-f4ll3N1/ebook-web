@@ -42,6 +42,33 @@
   ));
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
+  //for pop-up msg//
+  // Get the modal
+var popup = document.getElementById('popup');
+
+// Get the <span> element that closes the modal
+var closeBtn = document.getElementsByClassName('close-btn')[0];
+
+// Show the modal after 5 seconds
+window.onload = function() {
+    setTimeout(function() {
+        popup.style.display = 'block';
+    }, 5000); // 5000 milliseconds = 5 seconds
+}
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function() {
+    popup.style.display = 'none';
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == popup) {
+        popup.style.display = 'none';
+    }
+}
+//pop-up msg ends//
+
   // packages/shared/render/plugins/BaseSiteModules/tram-min.js
   var require_tram_min = __commonJS({
     "packages/shared/render/plugins/BaseSiteModules/tram-min.js"() {

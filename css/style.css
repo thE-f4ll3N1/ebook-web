@@ -5269,6 +5269,64 @@ a {
   flex-direction: column;
 }
 
+/* Pop up message */
+/* The Modal (background) */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top - adjust as needed */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.popup-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 24px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative; /* Ensure content is positioned relative to the modal */
+}
+
+/* The Close Button */
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*pop-up ends*/
+
+/*for pop-up contents*/
+.pop-up-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.popup-content h2 {
+  padding-top: 1rem;
+  font-size: 30px;
+
+}
 #w-node-b8e564d0-2c34-0ead-e5fb-435c3832b714-57a14d69 {
   align-self: center;
 }
