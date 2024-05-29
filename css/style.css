@@ -5327,6 +5327,62 @@ a {
   font-size: 30px;
 
 }
+
+/* Second pop-up */
+/* Styles for the second pop-up */
+.popup2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.popup-content2 {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add specific styles for the second pop-up content as needed */
+.custom-section2 { /* Add your styles */ }
+.custom-page-padding2 { /* Add your styles */ }
+.custom-container2 { /* Add your styles */ }
+.custom-padding-vertical2 { /* Add your styles */ }
+.custom-layout-grid2 { /* Add your styles */ }
+.custom-heading2 { /* Add your styles */ }
+.custom-subheading2 { /* Add your styles */ }
+.custom-image-wrapper2 { /* Add your styles */ }
+.custom-image2 { /* Add your styles */ }
+.custom-content2 { /* Add your styles */ }
+
 #w-node-b8e564d0-2c34-0ead-e5fb-435c3832b714-57a14d69 {
   align-self: center;
 }

@@ -44,7 +44,7 @@
 
   //for pop-up msg//
   // Get the modal
-var popup = document.getElementById('popup');
+/* var popup = document.getElementById('popup');
 
 // Get the <span> element that closes the modal
 var closeBtn = document.getElementsByClassName('close-btn')[0];
@@ -66,8 +66,44 @@ window.onclick = function(event) {
     if (event.target == popup) {
         popup.style.display = 'none';
     }
-}
+} */
 //pop-up msg ends//
+
+//2 pop-ups//
+// Function to show the pop-up after a specified time
+function showPopup(popupId, delay) {
+  setTimeout(function() {
+      document.getElementById(popupId).style.display = 'block';
+  }, delay);
+}
+
+// Show the first pop-up after 5 seconds
+window.onload = function() {
+  showPopup('popup', 5000); // 5000 milliseconds = 5 seconds
+  showPopup('popup2', 10000); // 10000 milliseconds = 10 seconds
+}
+
+// Get all close buttons
+var closeBtns = document.getElementsByClassName('close-btn');
+
+// Close pop-up when close button is clicked
+for (var i = 0; i < closeBtns.length; i++) {
+  closeBtns[i].onclick = function() {
+      var popup = this.parentElement.parentElement;
+      popup.style.display = 'none';
+  }
+}
+
+// Close pop-up when user clicks outside of it
+window.onclick = function(event) {
+  var popups = document.getElementsByClassName('popup');
+  for (var i = 0; i < popups.length; i++) {
+      if (event.target == popups[i]) {
+          popups[i].style.display = 'none';
+      }
+  }
+}
+
 
   // packages/shared/render/plugins/BaseSiteModules/tram-min.js
   var require_tram_min = __commonJS({
