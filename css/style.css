@@ -5363,7 +5363,7 @@ a {
 
 .popup-content2 {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 20% 60%; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
@@ -5390,6 +5390,21 @@ a {
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .popup {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .popup h2 {
+    font-size: 20px;
+  }
+
+  .popup p {
+    font-size: 16px;
+  }
+}
+
 /* Add specific styles for the second pop-up content as needed */
 .custom-section2 { /* Add your styles */ }
 .custom-page-padding2 { /* Add your styles */ }
@@ -5401,6 +5416,7 @@ a {
 .custom-image-wrapper2 { /* Add your styles */ }
 .custom-image2 { /* Add your styles */ }
 .custom-content2 { /* Add your styles */ }
+
 
 #w-node-b8e564d0-2c34-0ead-e5fb-435c3832b714-57a14d69 {
   align-self: center;
