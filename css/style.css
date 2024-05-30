@@ -5334,7 +5334,6 @@ a {
     padding: 15px;
   }
   .popup-content {
-    background-color: #fefefe;
     margin: 20% auto;
   }
 
@@ -5396,6 +5395,10 @@ a {
     padding: 15px;
   }
 
+  .popup-content {
+    margin: 20% auto;
+  }
+
   .popup h2 {
     font-size: 20px;
   }
@@ -5416,7 +5419,6 @@ a {
 .custom-image-wrapper2 { /* Add your styles */ }
 .custom-image2 { /* Add your styles */ }
 .custom-content2 { /* Add your styles */ }
-
 
 #w-node-b8e564d0-2c34-0ead-e5fb-435c3832b714-57a14d69 {
   align-self: center;
