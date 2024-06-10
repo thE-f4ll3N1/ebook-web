@@ -13792,6 +13792,68 @@ window.onclick = function(event) {
     }
   });
 
+  //Razorpay Button Script//
+  document.getElementById('rzp-button1').onclick = function(e) {
+    e.preventDefault();
+
+    var options = {
+        "key": "rzp_test_1WzjEdu14p0yMQ", //test_key_id
+        "amount": "1000", // Amount in paise for now 10
+        "currency": "INR",
+        "name": "Overseasway",
+        "description": "eBook Purchase",
+        "handler": function (response) {
+            // Send payment response to your backend - test-payments
+            fetch('https://a5q1tceyvl.execute-api.ap-south-1.amazonaws.com/prod/payment-success', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    payment_id: response.razorpay_payment_id
+                })
+            }).then(response => response.json())
+              .then(data => alert(data.message))
+              .catch(error => console.error('Error:', error));
+        },
+        "prefill": {
+            "name": "", // Name prefilled if you have it
+            "email": "" // Email prefilled if you have it
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.open();
+}
+
+//contact form//
+function submitForm(event) {
+  event.preventDefault();
+  
+  const form = document.getElementById('contact-form');
+  const formData = {
+    name: form.name.value,
+    phone: form.phone.value,
+    email: form.email.value
+  };
+  
+  fetch('https://zdd42spb69.execute-api.ap-south-1.amazonaws.com/post', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+    // Handle success response
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    // Handle error response
+  });
+}
+
   // <stdin>
   require_webflow_brand();
   require_webflow_edit();
