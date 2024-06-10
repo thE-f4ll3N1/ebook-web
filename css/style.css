@@ -2493,7 +2493,7 @@ a {
 
 .footer {
   background-color: var(--dark);
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .footer-left {
@@ -5275,7 +5275,7 @@ a {
 .popup {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 9998; /* Sit on top - adjust as needed */
+  z-index: 9999; /* Sit on top - adjust as needed */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
