@@ -2493,6 +2493,7 @@ a {
 
 .footer {
   background-color: var(--dark);
+  z-index: 9999;
 }
 
 .footer-left {
