@@ -2493,7 +2493,7 @@ a {
 
 .footer {
   background-color: var(--dark);
-  z-index: 9998;
+  z-index: 999;
 }
 
 .footer-left {
@@ -5409,6 +5409,37 @@ a {
 
   .popup p {
     font-size: 16px;
+  }
+}
+
+/* Flashing container */
+.flash-container {
+  position: fixed;
+  bottom: 10px; /* Adjust to place it at the bottom */
+  left: 10px; /* Adjust to place it towards the left */
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  z-index: 1000; /* Ensure it is on top of other content */
+}
+
+.flashing-image {
+  width: 100%;
+  height: 100%;
+  animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .flash-container {
+      width: 100px; /* Smaller size on mobile */
+      height: 100px; /* Smaller size on mobile */
+      bottom: 20px; /* Adjust padding on mobile */
+      left: 20px; /* Adjust padding on mobile */
   }
 }
 
