@@ -458,9 +458,7 @@
                   <div class="uui-footer02_heading">Join our newsletter</div>
                   <div class="uui-text-size-small">Join our newsletter to stay up to date on releases.</div>
                   <div class="uui-footer02_form-block w-form">
-                    <form id="contact-form" name="contact-form" data-name="Contact Form" method="post"
-                      class="uui-footer02_form" action="https://zdd42spb69.execute-api.ap-south-1.amazonaws.com/post"
-                      onsubmit="submitForm(event)">
+                    <form id="contact-form" name="contact-form" data-name="Contact Form" class="uui-footer02_form">
                       <input class="uui-form_input w-input" maxlength="256" name="name" data-name="Name"
                         placeholder="Enter your name" type="text" id="name" required />
                       <input class="uui-form_input w-input" maxlength="15" name="phone" data-name="Phone"
@@ -470,35 +468,51 @@
                       <input type="submit" data-wait="Please wait..." class="uui-button is-button-small w-button"
                         value="Subscribe" />
                     </form>
-                    <!-- <form id="contact-form" name="contact-form" data-name="Contact Form" method="get"
-                      class="uui-footer02_form" data-wf-page-id="65fd13851d264d1857a14d69"
-                      data-wf-element-id="7263455e-33bf-021a-8c5e-738dc25ed390">
-                      <input class="uui-form_input w-input" maxlength="256" name="name" data-name="Name"
-                        placeholder="Enter your name" type="text" id="name" required />
-                      <input class="uui-form_input w-input" maxlength="15" name="phone" data-name="Phone"
-                        placeholder="Enter your phone number" type="tel" id="phone" required />
-                      <input class="uui-form_input w-input" maxlength="256" name="email" data-name="Email"
-                        placeholder="Enter your email" type="email" id="email" required />
-                      <input type="submit" data-wait="Please wait..." class="uui-button is-button-small w-button"
-                        value="Subscribe" />
-                    </form> -->
-
-                    <!-- <form id="email-form" name="email-form" data-name="Email Form" method="get"
-                      class="uui-footer02_form" data-wf-page-id="65fd13851d264d1857a14d69"
-                      data-wf-element-id="7263455e-33bf-021a-8c5e-738dc25ed390"><input class="uui-form_input w-input"
-                        maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email" type="email"
-                        id="email" required="" /><input type="submit" data-wait="Please wait..."
-                        class="uui-button is-button-small w-button" value="Subscribe" /></form> -->
-                    <div class="uui-text-size-small">We care about your data in our <a
-                        href="https://oveseasway.in/privacy-policy.html" target="_blank"
-                        class="uui-text-style-link">privacy policy</a>.</div>
-                    <div class="success-message w-form-done">
+                    <div class="uui-text-size-small">
+                      We care about your data in our <a href="https://oveseasway.in/privacy-policy.html" target="_blank"
+                        class="uui-text-style-link">privacy policy</a>.
+                    </div>
+                    <div class="success-message w-form-done" style="display: none;">
                       <div>Thank you! Your submission has been received!</div>
                     </div>
-                    <div class="error-message w-form-fail">
+                    <div class="error-message w-form-fail" style="display: none;">
                       <div>Oops! Something went wrong while submitting the form.</div>
                     </div>
                   </div>
+
+                  <script>
+                    document.getElementById('contact-form').addEventListener('submit', function (event) {
+                      event.preventDefault();
+
+                      const formData = {
+                        name: document.getElementById('name').value,
+                        phone: document.getElementById('phone').value,
+                        email: document.getElementById('email').value
+                      };
+
+                      fetch('https://snyzscnbcg.execute-api.ap-south-1.amazonaws.com/hello/contact', {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                      })
+                        .then(response => {
+                          if (response.ok) {
+                            document.querySelector('.success-message').style.display = 'block';
+                            document.querySelector('.error-message').style.display = 'none';
+                          } else {
+                            throw new Error('Network response was not ok.');
+                          }
+                        })
+                        .catch(error => {
+                          document.querySelector('.success-message').style.display = 'none';
+                          document.querySelector('.error-message').style.display = 'block';
+                        });
+                    });
+                  </script>
+
+
                 </div>
               </div>
               <div class="uui-footer02_bottom-wrapper">

@@ -494,16 +494,18 @@ button, [type="button"], [type="reset"] {
 
 .w-form-done {
   text-align: center;
-  background-color: #ddd;
+  background-color: #fbd784;
   padding: 20px;
   display: none;
+  border-radius: 0.5rem;
 }
 
 .w-form-fail {
-  background-color: #ffdede;
+  background-color: #fbd784;
   margin-top: 10px;
   padding: 10px;
   display: none;
+  border-radius: 0.5rem;
 }
 
 label {
@@ -2895,7 +2897,7 @@ a {
 }
 
 .success-message {
-  background-color: #f4f4f4;
+  background-color: #fbd784;
   padding: 1.5rem;
 }
 
@@ -2930,7 +2932,7 @@ a {
 }
 
 .uui-button:hover {
-  border-color: var(--untitled-ui--primary700);
+  /* border-color: var(--untitled-ui--primary700); */
   background-color: var(--untitled-ui--primary700);
   color: var(--untitled-ui--white);
 }

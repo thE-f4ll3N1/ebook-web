@@ -13798,13 +13798,13 @@ window.onclick = function(event) {
 
     var options = {
         "key": "rzp_test_1WzjEdu14p0yMQ", //test_key_id
-        "amount": "1000", // Amount in paise for now 10
+        "amount": "29900", // Amount in paise for now 10
         "currency": "INR",
         "name": "Overseasway",
         "description": "eBook Purchase",
         "handler": function (response) {
             // Send payment response to your backend - test-payments
-            fetch('https://a5q1tceyvl.execute-api.ap-south-1.amazonaws.com/prod/payment-success', {
+            fetch('https://gtpbuyhq0g.execute-api.ap-south-1.amazonaws.com/customer-test/payment-success', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -13826,7 +13826,43 @@ window.onclick = function(event) {
 }
 
 //contact form//
-function submitForm(event) {
+/* document.getElementById('contact-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const email = document.getElementById('email').value;
+
+  const data = {
+      name: name,
+      phone: phone,
+      email: email
+  };
+
+  try {
+      const response = await fetch('https://wziqw1u87c.execute-api.ap-south-1.amazonaws.com/prod/contact', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      console.log(result);
+
+      if (response.ok) {
+          alert('Form submitted successfully!');
+      } else {
+          alert('Error submitting form: ' + result.message);
+      }
+  } catch (error) {
+      console.error('Error:', error);
+      alert('Error submitting form: ' + error.message);
+  }
+}); */
+
+/* function submitForm(event) {
   event.preventDefault();
   
   const form = document.getElementById('contact-form');
@@ -13836,7 +13872,7 @@ function submitForm(event) {
     email: form.email.value
   };
   
-  fetch('https://zdd42spb69.execute-api.ap-south-1.amazonaws.com/post', {
+  fetch('https://qztarbsjhd.execute-api.ap-south-1.amazonaws.com/prod/contact', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -13852,7 +13888,98 @@ function submitForm(event) {
     console.error('Error:', error);
     // Handle error response
   });
-}
+} */
+
+ /*  function submitForm(event) {
+    event.preventDefault();
+    
+    const form = document.getElementById('contact-form');
+    const formData = {
+      name: form.name.value,
+      phone: form.phone.value,
+      email: form.email.value
+    };
+    
+    fetch('YOUR_API_GATEWAY_ENDPOINT', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+      // Handle success response
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      // Handle error response
+    });
+  } */
+//trial contact js//
+/* document.getElementById('contact-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const email = document.getElementById('email').value;
+
+  const data = {
+      name: name,
+      phone: phone,
+      email: email
+  };
+
+  console.log('Sending data:', data); // Log the data being sent
+
+  try {
+      const response = await fetch('https://wziqw1u87c.execute-api.ap-south-1.amazonaws.com/prod/contact', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      console.log('Response:', result); // Log the response
+
+      if (response.ok) {
+          alert('Form submitted successfully!');
+      } else {
+          alert('Error submitting form: ' + result.message);
+      }
+  } catch (error) {
+      console.error('Error:', error);
+      alert('Error submitting form: ' + error.message);
+  }
+}); */
+
+/* function submitForm(event) {
+  event.preventDefault();
+  
+  let form = document.getElementById("contact-form");
+  let formData = new FormData(form);
+  
+  fetch(form.action, {
+      method: "POST",
+      body: formData
+  })
+  .then(response => {
+      if (response.ok) {
+          document.querySelector('.w-form-done').style.display = "block";
+          form.reset();
+      } else {
+          document.querySelector('.w-form-fail').style.display = "block";
+      }
+  })
+  .catch(error => {
+      console.error('Error submitting form:', error);
+      document.querySelector('.w-form-fail').style.display = "block";
+  });
+} */
+
 
   // <stdin>
   require_webflow_brand();
