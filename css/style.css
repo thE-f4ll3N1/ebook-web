@@ -5445,6 +5445,100 @@ a {
   }
 }
 
+/* Sticky banner */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  padding: 20px;
+  /* Additional styling for your main content */
+}
+
+.sticky-banner {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #e74c3c; /* Background color */
+  padding: 10px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px 0 0 5px;
+  z-index: 10000;
+  writing-mode: vertical-rl; /* Vertical text */
+  text-align: center;
+}
+
+.sample-request {
+  text-decoration: none;
+  color: white; /* Text color */
+  font-weight: bold;
+  display: block;
+  padding: 10px 0;
+  /* background-color: #e74c3c; */ /* Button background color */
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.sticky-banner:hover {
+  background-color: #eca400; /* Button hover background color */
+}
+
+@media (max-width: 768px) {
+  .sticky-banner {
+      padding: 5px 10px; /* Reduce padding on smaller screens */
+      font-size: 14px; /* Adjust font size if necessary */
+  }
+
+  .sample-request {
+      padding: 5px 0; /* Adjust padding for the text */
+      font-size: 14px; /* Adjust font size if necessary */
+  }
+}
+
+/* Contact buttons */
+.contact-buttons {
+  display: none; /* Hide by default */
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10001; /* Ensure it appears above other elements */
+}
+
+.contact-buttons a {
+  display: inline-block;
+  margin: 5px;
+}
+
+.contact-buttons img {
+  width: 40px; /* Adjust icon size */
+  height: 40px;
+  border-radius: 5px;
+  background-color: #e4ebf3;
+}
+
+@media (max-width: 768px) {
+  .sticky-banner {
+      padding: 5px 10px; /* Reduce padding on smaller screens */
+      font-size: 14px; /* Adjust font size if necessary */
+  }
+
+  .sample-request {
+      padding: 5px 0; /* Adjust padding for the text */
+      font-size: 14px; /* Adjust font size if necessary */
+  }
+
+  .contact-buttons {
+      display: block; /* Show on mobile and tablet screens */
+  }
+
+  .contact-buttons img {
+      width: 30px; /* Adjust icon size for mobile and tablet */
+      height: 30px;
+  }
+}
+
+
 /* Add specific styles for the second pop-up content as needed */
 .custom-section2 { /* Add your styles */ }
 .custom-page-padding2 { /* Add your styles */ }
