@@ -2161,7 +2161,7 @@ h1 {
 h2 {
   margin-top: 0;
   margin-bottom: 24px;
-  font-family: "Serif Display", sans-serif;
+  font-family: "Serif Display";
   font-size: 64px;
   font-weight: 600;
   line-height: 110%;
@@ -2349,7 +2349,7 @@ a {
 
 .h1-title {
   margin-bottom: 32px;
-  font-family: "Serif Display", sans-serif;
+  font-family: "Serif Display";
 }
 
 .mntn-logo {
