@@ -3338,6 +3338,7 @@ a {
   grid-row-gap: 3rem;
   grid-template-rows: auto;
   grid-template-columns: 1fr;
+  padding-top: 5rem;
 }
 
 .uui-pricing01_component {
@@ -5537,6 +5538,23 @@ body {
       height: 30px;
   }
 }
+
+/* New Button CTA */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #001d4a;
+  background-color: #fbd784;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #fbd784;
 
 
 /* Add specific styles for the second pop-up content as needed */
